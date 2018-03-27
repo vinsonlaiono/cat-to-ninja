@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+    $(document).ready(function(){ 
+        $("img").click(function(){
+            if($(this).attr('src') === $(this).data('alt1')){
+                $(this).attr('src', $(this).data('alt2'));                           
+            } 
+            else {
+                 $(this).attr('src', $(this).data('alt1'));
+            }
+        });
+        
+    });
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <h1 class="cat">Cat</h1>
+        <h1 class="Ninja">Ninja</h1>
+        <img src="cat0.png" data-alt1="ninja0.png" data-alt2="cat0.png">
+        <img src="cat1.png" data-alt1="ninja1.png" data-alt2="cat1.png">
+        <img src="cat2.png" data-alt1="ninja2.png" data-alt2="cat2.png">
+        <img src="cat3.png" data-alt1="ninja3.png" data-alt2="cat3.png">
+        <img src="cat4.png" data-alt1="ninja4.png" data-alt2="cat4.png">
+    </div>
+</body>
+</html>
